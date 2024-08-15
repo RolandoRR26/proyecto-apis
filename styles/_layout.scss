@@ -1,0 +1,251 @@
+body {
+    background-color: #000000;
+}
+
+header {
+    display: flex;
+    background-color: #ffb300;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+
+
+    h1 {
+        @include principalFont;
+        color: #3e3e3e;
+        font-size: 3rem;
+    }
+}
+
+main {
+    .search {
+        display: flex;
+        justify-content: center;
+
+        .search-div {
+            padding: 2rem;
+
+            .search-input {
+                @include principalFont;
+                text-align: center;
+                font-weight: 600;
+                width: 20rem;
+                height: 3rem;
+                border-radius: 15px;
+                outline: none;
+                background-color: #3e3e3e;
+                color: #ffffff;
+                font-size: 1rem;
+                border: none;
+
+
+                &:hover {
+                    background-color: #ffb300;
+                    transition: 400ms;
+                    color: #000000;
+
+                }
+
+
+            }
+
+            .search-button {
+                width: 10rem;
+                height: 3rem;
+                border-radius: 15px;
+                background-color: #ffb300;
+                border: none;
+                @include principalFont;
+                color: #313131;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fbfbfb;
+                    transition: 400ms;
+                }
+            }
+        }
+    }
+
+    .results-data {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        padding: 2rem;
+
+
+        .card-tv-show {
+
+            border-radius: 10px;
+            text-align: center;
+            padding-bottom: 1rem;
+            color: #313131;
+            background-color: #ffb300;
+
+            @include principalFont;
+
+            .show-genres {
+                font-weight: 400;
+            }
+
+
+            .image-container {
+                padding: 1rem;
+
+                img {
+                    display: inline-block;
+                }
+
+            }
+
+            .infoButton {
+                display: none;
+            }
+        }
+
+        .card-tv-show-two {
+            border-radius: 10px;
+            text-align: center;
+            padding-bottom: 1rem;
+            color: #838383;
+            position: relative;
+            background-color: #262626;
+            @include principalFont;
+
+
+            .show-genres {
+                font-weight: 400;
+            }
+
+            .image-container {
+                padding: 1rem;
+
+                img {
+                    display: inline-block;
+                    opacity: 0.2;
+                }
+            }
+
+            .infoButton {
+                @include principalFont;
+                font-weight: 600;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #ffb300;
+                color: rgb(0, 0, 0);
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 16px;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: #ffd77b;
+
+                    transition: 400ms;
+
+                    font-weight: 600;
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+    .info-show {
+        color: #000000;
+        background-color: #ffb300;
+        padding: 2rem;
+        padding-top: 8rem;
+        @include principalFont;
+
+
+        .card-info-show-name {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        .show-info-genres {
+            text-align: center;
+        }
+
+        .container-Info-and-img {
+            display: flex;
+
+            .image-info-container {
+                width: 40%;
+                padding-right: 7rem;
+
+            }
+
+            .info-container-div {
+                padding-right: 15rem;
+                padding-left: 10rem;
+                font-size: 1.5rem;
+
+            }
+
+        }
+    }
+
+    footer {
+        background-color: #ffd77b;
+        width: 100%;
+        height: 9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include principalFont;
+    }
+
+    @include responsive{
+
+        .results-data {
+            grid-template-columns: 1fr;
+        }
+
+     
+    }
+    
+
+    
+}
+
+@include responsive {
+
+    .search-button {
+        margin-top: 1rem;
+    }
+
+    .search-div {
+        text-align: center;
+    }
+
+    header {
+        h1 {
+            font-size: 1rem;
+        }
+    }
+
+    .info-show{
+        font-size: 10px;
+        padding-top: 0;
+    }
+
+    .container-info-and-img{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .oficialsite-info{
+        font-size: 0.7rem;
+    }
+    
+    
+}
