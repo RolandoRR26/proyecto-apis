@@ -25,7 +25,7 @@ const createCard = (show) => {
     if (show.image && show.image.medium) {
         images.src = show.image.medium;
     } else {
-        images.src = "/assets/img/image-not-found.png";
+        images.src = "assets/img/image-not-found.png";
     }
 
     const moreInfoButton = document.createElement("button");
